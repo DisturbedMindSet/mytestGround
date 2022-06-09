@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const hbs = require("hbs");
 
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 
 // const http = require("http");
 // const server = http.server(app);
