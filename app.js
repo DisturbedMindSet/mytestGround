@@ -1,13 +1,16 @@
 const express = require("express");
 const app = express();
+const hbs = require("hbs");
 
 const port = process.env.port || 4000;
 
-const http = require("http");
-const server = http.server(app);
+// const http = require("http");
+// const server = http.server(app);
+
+app.set("view engine", "hbs");
 
 app.get("/", (req, res) => {
-	res.sendFile("/index.html", { root: __dirname });
+	res.render("index");
 	console.log(__dirname);
 });
 
